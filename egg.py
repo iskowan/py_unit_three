@@ -1,7 +1,7 @@
 # Start writing your functions below this line
 
-# defining the parts of the egg
-    #Top of the egg
+'''defining the parts of the egg
+Top of the egg'''
 def eggTop():
     print("   ————————")
     print(" /          \\")
@@ -15,6 +15,10 @@ def eggBottom():
 def eggLine():
     print(" —\"—'—\"—'—\"—")
     #print(" —" """"—'—" """ "—'—"""""—""")
+
+'''
+execution of the functions:
+'''
 
 eggTop()
 eggBottom()
