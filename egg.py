@@ -16,20 +16,24 @@ def eggLine():
     print(" —\"—'—\"—'—\"—")
     #print(" —" """"—'—" """ "—'—"""""—""")
 
+#defining main function
+def main():
+    for x in range(2):
+        eggTop()
+        eggBottom()
+        eggLine()
+    eggBottom()
+    eggTop()
+    eggLine()
+    eggBottom()
+
+#executing main function
+main()
+
 '''
 execution of the functions:
 '''
 
-eggTop()
-eggBottom()
-eggLine()
-eggTop()
-eggBottom()
-eggLine()
-eggBottom()
-eggTop()
-eggLine()
-eggBottom()
 
 
 '''
