@@ -1,28 +1,49 @@
-# Anderson Iskowitz
-# Unit 3 Project
-#how to make the length return as a float
-#asking for inputs about the length and color of the plus signs
-
+'''
+Anderson Iskowitz
+Unit 3 Project
+'''
+#getting input for the color and size of the flower
 length = int(input("What is the length of the side?:"))
 colorCenter = input("What is the color of the center hexagon?:")
 colorPetal = input("What is the color of the petals?:")
+lengthMovement = length * 2
 
+# importing turtle
+import turtle
+#defining t to turtle so it is easier to type
+t = turtle.Turtle()
 
-def drawHexagon():
-    t.fillcolor(colorPetal)
+#defining shapes
+def drawHexagon(color):
+    t.fillcolor(color)
+    '''
+    t.pencolor(color) makes the pen outline the same as the fill color
+    '''
+    t.begin_fill()
     for x in range(6):
         t.fd(length)
+        t.right(60)
+    t.end_fill()
+
+def drawCenter():
+    t.rt(60)
+    t.fd(length)
+    t.left(60)
+    drawHexagon(colorCenter)
+
+def drawFlower():
+    for x in range(6):
+        t.penup()
+        t.fd(lengthMovement)
+        t.pendown()
+        drawHexagon(colorPetal)
         t.rt(60)
 
+def main():
+    drawFlower()
+    drawCenter()
 
-
-
-
-#importing turtle to draw the plus signs
-import turtle
-t = turtle.Turtle()
-t.color(colorCenter)
-drawHexagon()
-
+#calling main function
+main()
 
 turtle.exitonclick()
