@@ -1,8 +1,11 @@
 '''
 Anderson Iskowitz
 Unit 3 Project
+8 October 2022
+This document draws a flower out depending on the user's input
 '''
-#getting input for the color and size of the flower
+
+# getting input for the color and size of the flower
 length = int(input("What is the length of the side?:"))
 colorCenter = input("What is the color of the center hexagon?:")
 colorPetal = input("What is the color of the petals?:")
@@ -10,10 +13,10 @@ lengthMovement = length * 2
 
 # importing turtle
 import turtle
-#defining t to turtle so it is easier to type
+# defining t to turtle so it is easier to type
 t = turtle.Turtle()
 
-#defining shapes
+# defining shapes
 def drawHexagon(color):
     t.fillcolor(color)
     '''
@@ -38,12 +41,12 @@ def drawFlower():
         t.pendown()
         drawHexagon(colorPetal)
         t.rt(60)
-
+# defining main function
 def main():
     drawFlower()
     drawCenter()
 
-#calling main function
+# calling main function
 main()
 
 turtle.exitonclick()
