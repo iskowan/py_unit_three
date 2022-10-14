@@ -1,9 +1,18 @@
+#Anderson Iskowitz
+#Unit 3 Project
+#8 October 2022
+#This document draws a flower out depending on the user's input
+
 '''
-Anderson Iskowitz
-Unit 3 Project
-8 October 2022
-This document draws a flower out depending on the user's input
+getting input for the length
 '''
+length = int(input("What is the length of the side?:"))
+'''getting the color of the center hexagon'''
+colorCenter = input("What is the color of the center hexagon?:")
+'''getting the color of the outer hexagons'''
+colorPetal = input("What is the color of the petals?:")
+'''making movement of the length twice'''
+lengthMovement = length * 2
 
 # defining shapes
 def drawHexagon(color):
@@ -35,12 +44,6 @@ def drawFlower():
 def main():
     drawFlower()
     drawCenter()
-
-# getting input for the color and size of the flower
-length = int(input("What is the length of the side?:"))
-colorCenter = input("What is the color of the center hexagon?:")
-colorPetal = input("What is the color of the petals?:")
-lengthMovement = length * 2
 
 # importing turtle
 import turtle
