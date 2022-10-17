@@ -1,16 +1,16 @@
 #Anderson Iskowitz Unit 3 Project
 #Last edited: 14 October 2022
 #This document draws a flower out depending on the user's input of size and color
-'''
-getting input for the length'''
 
+'''getting input for the length'''
+print("This code makes a flower using hexagons, please enter the following:")
 length = int(input("What is the length of the side?:"))
 
 '''getting the color of the center hexagon'''
-colorCenter = input("What is the color of the center hexagon?:")
+colorCenter = input("What is the color of the center hexagon?(red, blue, green, etc):")
 
 '''getting the color of the outer hexagons'''
-colorPetal = input("What is the color of the petals?:")
+colorPetal = input("What is the color of the petals?(red, blue, green, etc):")
 
 '''making movement of the length twice'''
 lengthMovement = length * 2
@@ -50,9 +50,12 @@ import turtle
 t = turtle.Turtle()
 # calling main function
 main()
+print("Please exit the turtle application by clicking the pop up")
+turtle.exitonclick()
 
+
+'''testing the code via unit test'''
 import unittest
-
 class TestStringMethods(unittest.TestCase):
     def upperTest(self):
         self.assertEqual('boo'.upper(), 'BOO')
@@ -63,5 +66,3 @@ class TestStringMethods(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
-turtle.exitonclick()
