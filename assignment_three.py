@@ -51,4 +51,17 @@ t = turtle.Turtle()
 # calling main function
 main()
 
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+    def upperTest(self):
+        self.assertEqual('boo'.upper(), 'BOO')
+
+    def testIsUpper(self):
+        self.assertTrue('BOO'.isupper())
+        self.assertFalse('Boo'.isupper())
+
+if __name__ == '__main__':
+    unittest.main()
+
 turtle.exitonclick()
